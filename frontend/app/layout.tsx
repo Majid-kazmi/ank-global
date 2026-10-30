@@ -20,6 +20,8 @@ const plusJakarta = Plus_Jakarta_Sans({
   display: 'swap',
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ankglobal.co'),
   title: {
@@ -43,9 +45,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'ANK Global Chartered Accountants and Advisors' }],
   creator: 'ANK Global',
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: `${basePath}/favicon.svg`,
+    shortcut: `${basePath}/favicon.svg`,
+    apple: `${basePath}/favicon.svg`,
   },
   openGraph: {
     type: 'website',
@@ -92,13 +94,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${plusJakarta.variable} scroll-smooth`}>
       <head>
+        <link rel="icon" type="image/svg+xml" href={`${basePath}/favicon.svg`} />
+        <link rel="alternate icon" href={`${basePath}/favicon.ico`} />
+        <link rel="apple-touch-icon" href={`${basePath}/favicon.svg`} />
         <JsonLd />
       </head>
-      <body className="font-sans min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-crimson-600 selection:text-white">
+      <body className="font-sans min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-crimson-600 selection:text-white overflow-x-hidden w-full">
         <ScrollProgressBar />
         <SmoothScrollProvider>
           <Navbar />
-          <main className="flex-grow">{children}</main>
+          <main className="flex-grow overflow-x-hidden">{children}</main>
           <Footer />
           <WhatsAppButton />
         </SmoothScrollProvider>

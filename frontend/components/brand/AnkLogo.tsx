@@ -16,18 +16,19 @@ export function AnkLogo({
   className = 'h-8 sm:h-9 w-auto',
   priority = false,
 }: AnkLogoProps) {
-  let src = '/images/brand/ank-logo.svg';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  let src = `${basePath}/images/brand/ank-logo.svg`;
   let aspectWidth = 2172;
   let aspectHeight = 724;
 
   if (variant === 'dark') {
-    src = '/images/brand/ank-logo-white.svg';
+    src = `${basePath}/images/brand/ank-logo-white.svg`;
   } else if (variant === 'mark') {
-    src = '/images/brand/ank-mark.svg';
+    src = `${basePath}/images/brand/ank-mark.svg`;
     aspectWidth = 512;
     aspectHeight = 512;
   } else if (variant === 'mark-dark') {
-    src = '/images/brand/ank-mark-white.svg';
+    src = `${basePath}/images/brand/ank-mark-white.svg`;
     aspectWidth = 512;
     aspectHeight = 512;
   }
