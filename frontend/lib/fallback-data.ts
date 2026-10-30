@@ -15,9 +15,9 @@ export const FALLBACK_SERVICES = [
     id: 's1',
     slug: 'uae-corporate-tax',
     title: 'UAE Corporate Tax Advisory & Filing',
-    category: 'Taxation Services',
+    category: 'Tax Services',
     shortDescription: 'Comprehensive Federal Corporate Tax compliance, tax registration, transfer pricing, and small business relief under Federal Decree-Law No. 47 of 2022.',
-    fullDescription: 'The UAE Federal Corporate Tax regime is an essential consideration for all businesses operating across the Emirates. Under Federal Decree-Law No. 47 of 2022, taxable persons must register with the Federal Tax Authority (FTA), maintain compliant IFRS financial statements, calculate taxable income with accurate non-deductible adjustments, and submit their Corporate Tax returns within 9 months of the financial year-end.',
+    fullDescription: 'The UAE Federal Corporate Tax regime is an essential consideration for all businesses operating across the Emirates. Under Federal Decree-Law No. 47 of 2022, taxable persons must register with the Federal Tax Authority (FTA), maintain compliant IFRS financial statements, calculate taxable income with accurate non-deductible adjustments, and submit their Corporate Tax returns within 9 months of the financial year-end.\n\nANK Global conducts formal Corporate Tax Readiness Assessments, identifies Qualifying Free Zone Person (QFZP 0%) opportunities, structures intercompany transactions to meet Transfer Pricing standards, and manages timely electronic submissions via the FTA EmaraTax platform.',
     features: [
       'Corporate Tax Registration & TRN issuance with FTA',
       'Corporate Tax Impact Assessment & Financial Restructuring',
@@ -42,6 +42,7 @@ export const FALLBACK_SERVICES = [
         answer: 'Yes. All Free Zone entities must register for Corporate Tax regardless of whether they qualify for the 0% Qualifying Free Zone Person (QFZP) tax rate.'
       }
     ],
+    imageUrl: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80',
     metaTitle: 'UAE Corporate Tax Advisory & Return Filing | ANK Global Dubai',
     metaDescription: 'Expert UAE Corporate Tax services in Dubai. FTA tax registration, QFZP 0% advisory, transfer pricing, small business relief, and compliant return filing.',
   },
@@ -49,309 +50,419 @@ export const FALLBACK_SERVICES = [
     id: 's2',
     slug: 'uae-vat-compliance',
     title: 'UAE VAT Advisory & Return Filing',
-    category: 'Taxation Services',
+    category: 'Tax Services',
     shortDescription: 'End-to-end Value Added Tax solutions: FTA registration, return filing, VAT health checks, input tax recovery optimization, and tax audit representation.',
-    fullDescription: 'Value Added Tax (VAT) in the UAE applies at a standard rate of 5% on taxable supplies of goods and services. Since its introduction, the Federal Tax Authority has heightened auditing standards, requiring rigorous compliance with tax invoicing requirements, reverse charge mechanisms, and input tax apportionment rules.',
+    fullDescription: 'Value Added Tax (VAT) in the UAE applies at a standard rate of 5% on taxable supplies of goods and services. Since its introduction, the Federal Tax Authority has heightened auditing standards, requiring rigorous compliance with tax invoicing requirements, reverse charge mechanisms, and input tax apportionment rules.\n\nANK Global provides thorough VAT health checks to ensure your company avoids severe administrative penalties. Our tax agents prepare monthly and quarterly VAT returns, represent clients during FTA tax audits, and file Voluntary Disclosures (Form 211) when adjustments are needed.',
     features: [
       'VAT Registration, De-registration, and Tax Group Formation',
       'Quarterly & Monthly VAT Return Preparation and Filing',
       'VAT Health Check & Historical Transaction Review',
       'Voluntary Disclosure Form 211 Filing for Error Corrections',
       'FTA Reconsideration & Penalty Waiver Submissions',
-      'Tax Audit Representation & FTA Inquiry Defense'
+      'Input VAT Apportionment & Designated Zone Goods Scoping'
     ],
     deliverables: [
-      'Accurate VAT Summary Worksheets with Reconciliation',
-      'Form VAT201 Electronic Filing Submission',
-      'VAT Health Check Audit Scorecard & Risk Matrix'
+      'FTA Approved VAT Certificate (Tax Registration Number)',
+      'Quarterly Filed VAT 201 Return Acknowledgement',
+      'VAT Compliance & Risk Assessment Audit Memo',
+      'Tax Agency Representation Letter'
     ],
     faqs: [
       {
-        question: 'When is VAT registration mandatory in the UAE?',
-        answer: 'Mandatory VAT registration is required when the total value of taxable supplies and imports exceeds AED 375,000 over the preceding 12 months or is expected to exceed it in the next 30 days.'
+        question: 'What is the mandatory threshold for VAT registration in UAE?',
+        answer: 'Businesses with taxable supplies and imports exceeding AED 375,000 in the preceding 12 months or expected in the next 30 days must mandatorily register for VAT. Voluntary registration is available at AED 187,500.'
+      },
+      {
+        question: 'What happens if a company files its VAT return late?',
+        answer: 'Late filing or late payment attracts automatic administrative penalties starting at AED 1,000 for the first offense, increasing for recurring defaults, alongside monthly percentage interest charges on outstanding tax.'
       }
     ],
-    metaTitle: 'UAE VAT Registration, Return Filing & Health Checks | ANK Global',
-    metaDescription: 'Complete UAE VAT compliance and advisory services by FTA certified tax professionals in Dubai. VAT returns, health checks, voluntary disclosures and audit defense.',
+    imageUrl: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'UAE VAT Advisory & Return Filing Services Dubai | ANK Global',
+    metaDescription: 'Complete UAE VAT compliance in Dubai. VAT registration, quarterly filing, VAT health checks, input tax optimization, and FTA audit representation.',
   },
   {
     id: 's3',
     slug: 'excise-tax-advisory',
     title: 'Excise Tax Advisory & Compliance',
-    category: 'Taxation Services',
-    shortDescription: 'Specialized indirect tax services for importers, producers, and warehouse keepers of excise goods (tobacco, energy drinks, sweetened beverages).',
-    fullDescription: 'Excise tax is levied on designated goods that are deemed harmful to human health or the environment. Operating in the excise sector requires specialized handling of Designated Zones, Customs clearance integrations, product registration in the FTA Excise Goods List, and strict inventory monitoring.',
+    category: 'Tax Services',
+    shortDescription: 'Specialist compliance for excise goods: carbonated drinks, energy drinks, tobacco products, and electronic smoking devices under Federal Decree-Law No. 7 of 2017.',
+    fullDescription: 'Excise Tax is levied on specific goods that are considered harmful to human health or the environment. Operating within the excise supply chain requires designated zone registration, accurate tax price calculations (Retail Sales Price RSP methodology), and strict digital tax stamp adherence.\n\nANK Global provides advisory services to manufacturers, importers, and warehouse keepers, ensuring complete compliance with the FTA Excise Tax framework and digital tracking regulations.',
     features: [
-      'Excise Tax Registration for Businesses & Warehouse Keepers',
-      'Excise Product Registration in the FTA Clearing System',
-      'Designated Zone Registration & Bonded Storage Compliance',
-      'Monthly Excise Tax Return Filing (Form EX201)',
-      'FTA Digital Tax Stamp (DTS) Scheme Advisory'
+      'Excise Tax Registration for Entities and Specific Goods',
+      'Designated Zone Registration & Warehouse Keeper Compliance',
+      'Monthly Excise Tax Return Calculation & Electronic Filing',
+      'Digital Tax Stamps (DTS) Application & Tracking Management',
+      'Customs Clearance Coordination & Import Declaration Verification'
     ],
     deliverables: [
-      'Excise Registration Certificate & FTA Warehouse Permit',
-      'Monthly Excise Tax Return Filings',
-      'Designated Zone Stock Audit Reports'
+      'Excise Tax Registration Certificate',
+      'Designated Zone Warehouse Certification',
+      'Monthly Excise Return Submission Records'
     ],
     faqs: [
       {
-        question: 'What goods are subject to UAE Excise Tax?',
-        answer: 'Carbonated drinks (50%), energy drinks (100%), tobacco products (100%), electronic smoking devices (100%), and sweetened drinks (50%).'
+        question: 'What are the current UAE Excise Tax rates?',
+        answer: 'The rates are 50% on carbonated drinks and sweetened beverages, 100% on energy drinks, 100% on tobacco and electronic smoking devices, and 100% on liquids used in electronic smoking devices.'
       }
     ],
-    metaTitle: 'UAE Excise Tax Advisory & Product Registration | ANK Global',
-    metaDescription: 'Specialized UAE Excise Tax advisory in Dubai. Excise registration, product classification, designated zone compliance, and monthly return filing.',
+    imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'Excise Tax Advisory & Designated Zone Filing Dubai | ANK Global',
+    metaDescription: 'Expert UAE Excise Tax consultants in Dubai. Registration of excise goods, designated warehouse compliance, digital tax stamps, and FTA filings.',
   },
   {
     id: 's4',
     slug: 'economic-substance-regulations',
     title: 'Economic Substance Regulations (ESR)',
-    category: 'Taxation Services',
-    shortDescription: 'Guidance on UAE Economic Substance requirements, Relevant Activity assessments, notification submissions, and substance reporting.',
-    fullDescription: 'The UAE Economic Substance Regulations mandate that onshore and free zone companies conducting Relevant Activities maintain an adequate economic presence within the UAE. While recent regulatory updates and Corporate Tax rules coordinate with substance provisions, businesses must ensure historical compliance and evaluate current applicability.',
+    category: 'Tax Services',
+    shortDescription: 'Comprehensive guidance on Cabinet Resolution No. 57 of 2020: Relevant Activity scoping, core income-generating activities (CIGA), notifications, and annual substance reporting.',
+    fullDescription: 'The UAE Economic Substance Regulations (ESR) mandate that onshore and Free Zone companies carrying out defined Relevant Activities maintain genuine commercial substance within the UAE. Licensees must demonstrate adequate employees, operational expenditures, and local physical presence.\n\nANK Global conducts rigorous ESR assessments, files mandatory annual notifications via the Ministry of Finance portal, and prepares technical substance reports to eliminate multi-thousand Dirham non-compliance penalties.',
     features: [
-      'Relevant Activity Scoping & Substance Test Assessment',
-      'Core Income-Generating Activities (CIGA) Review',
-      'Preparation and Submission of Annual ESR Notifications',
-      'Preparation of Detailed Economic Substance Returns',
-      'ESR Penalty Appeals & Regulatory Authority Defense'
+      'Relevant Activity Scoping across 9 Statutory Business Categories',
+      'Core Income-Generating Activities (CIGA) Substance Review',
+      'Annual ESR Notification Filing via the Ministry of Finance Portal',
+      'Detailed ESR Annual Report Preparation with Accounting Reconciliation',
+      'Appeals and Penalty Relief Submissions with Ministry Regulatory Bodies'
     ],
     deliverables: [
-      'ESR Applicability & Gap Analysis Report',
-      'FTA Ministry of Finance ESR Notification Confirmation',
-      'Annual ESR Return Submission Documentation'
+      'ESR Technical Scoping & Substance Opinion Memorandum',
+      'Ministry of Finance Filed Notification Receipt',
+      'Final Annual ESR Report Filing Submission Record'
     ],
     faqs: [
       {
-        question: 'What are the Relevant Activities under UAE ESR?',
-        answer: 'Banking, Insurance, Investment Fund Management, Lease-Finance, Headquarter Business, Shipping, Holding Company Business, Intellectual Property (IP) Business, and Distribution & Service Centre Business.'
+        question: 'What are the 9 Relevant Activities subject to ESR?',
+        answer: 'Banking, Insurance, Investment Fund Management, Lease-Finance, Headquarters, Shipping, Holding Company, Intellectual Property, and Distribution & Service Centre businesses.'
       }
     ],
-    metaTitle: 'UAE Economic Substance Regulations (ESR) Compliance | ANK Global',
-    metaDescription: 'UAE Economic Substance Regulations advisory. Activity evaluation, ESR notifications, annual returns, and substance test verification in Dubai.',
+    imageUrl: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'Economic Substance Regulations (ESR) UAE | ANK Global Dubai',
+    metaDescription: 'UAE Economic Substance Regulations compliance services in Dubai. Relevant activity scoping, ESR notifications, annual reporting, and penalty mitigation.',
   },
   {
     id: 's5',
     slug: 'audit-and-assurance',
-    title: 'Audit & Assurance (Internal & External)',
-    category: 'Audit & Assurance',
-    shortDescription: 'Independent statutory financial audits, internal controls evaluation, risk advisory, fixed asset verification, and bank/free zone compliance audits.',
-    fullDescription: 'Independent auditing is the cornerstone of stakeholder confidence, credit facility access, and regulatory compliance in the UAE. Most UAE Free Zones (DMCC, DIFC, JAFZA, DAFZA) and mainland authorities require audited annual financial statements for trade license renewal and shareholder reporting.',
+    title: 'Statutory Audit & Assurance Services',
+    category: 'Financial & Audit',
+    shortDescription: 'Independent statutory financial audits meeting International Standards on Auditing (ISA) and IFRS. Approved auditors across mainland DED and major UAE Free Zones.',
+    fullDescription: 'Independent, high-integrity financial audits are vital for regulatory licensing compliance, banking facilities, and institutional stakeholder confidence. ANK Global delivers meticulous statutory audit and assurance services adhering strictly to International Standards on Auditing (ISA) and International Financial Reporting Standards (IFRS).\n\nOur certified audit opinions are accredited by all major UAE Free Zone authorities—including DMCC, DIFC, JAFZA, DAFZA, IFZA—and all tier-1 UAE banks and judicial departments.',
     features: [
-      'Statutory Financial Statement Audits (External Audit)',
-      'Internal Audit & Operational Risk Assessments',
-      'Enterprise Risk Management (ERM) Frameworks',
-      'Fixed Asset Physical Verification & Tagging',
-      'Sales Audit Reports for Malls & Franchise Operators',
-      'Financial Due Diligence for Mergers & Acquisitions'
+      'Independent Statutory Financial Statement Audits (IFRS / ISA)',
+      'Free Zone License Renewal Audit Submissions (DMCC, DIFC, JAFZA, etc.)',
+      'Internal Audit & Internal Control Effectiveness Reviews',
+      'Agreed-Upon Procedures (AUP) & Forensic Accounting Investigations',
+      'Special Purpose Audits for M&A, Liquidation, and Joint Ventures',
+      'Bank Facility Audits & Debt Covenant Certification'
     ],
     deliverables: [
-      'Independent Auditor’s Report signed by Licensed Auditors',
-      'Audited Financial Statements (Balance Sheet, P&L, Cash Flow, Notes)',
-      'Comprehensive Management Letter on Internal Controls'
+      'Signed Independent Auditor’s Report & Audited Financial Statements',
+      'Management Letter detailing Internal Control Enhancements',
+      'Free Zone Portal Approved Audit Upload Acknowledgement'
     ],
     faqs: [
       {
-        question: 'Is external audit mandatory in Dubai Free Zones?',
-        answer: 'Yes, authorities such as DMCC, DIFC, JAFZA, and DAFZA mandate the submission of audited financial statements prepared by an approved auditor at the time of trade license renewal.'
+        question: 'Which UAE Free Zones require mandatory statutory audit?',
+        answer: 'DMCC, DIFC, JAFZA, DAFZA, RAKEZ, and SAIF Zone require mandatory annual audited financial statements for company trade license renewal.'
+      },
+      {
+        question: 'Are ANK Global audit reports accepted by UAE banks?',
+        answer: 'Yes. ANK Global is recognized and accepted across major commercial banks in the UAE for working capital facilities, letters of credit, and corporate banking reviews.'
       }
     ],
-    metaTitle: 'External & Internal Audit Services in Dubai, UAE | ANK Global',
-    metaDescription: 'Approved auditors in UAE. Independent statutory audit, free zone compliance audit, internal control reviews, and risk assurance across Dubai & Emirates.',
+    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'Statutory Audit & Assurance Services Dubai | ANK Global',
+    metaDescription: 'Ministry approved statutory auditors in Dubai. Financial statement audits meeting ISA/IFRS standards, Free Zone license renewals, and internal control reviews.',
   },
   {
     id: 's6',
     slug: 'accounting-and-bookkeeping',
     title: 'Accounting & Bookkeeping Services',
-    category: 'Accounting Services',
-    shortDescription: 'High-precision cloud accounting, backlog clearance, inventory reconciliation, management reporting (MIS), and IFRS-compliant ledger maintenance.',
-    fullDescription: 'Maintaining clean, up-to-date accounting records is legally required under the UAE Commercial Companies Law and Corporate Tax Law. Inaccurate books expose businesses to tax audit adjustments, disallowed expense deductions, and misinformed management decisions.',
+    category: 'Financial & Audit',
+    shortDescription: 'Cloud-enabled, IFRS-compliant accounting: daily ledger maintenance, bank reconciliations, monthly MIS reporting, backlog accounting cleanup, and payroll.',
+    fullDescription: 'Accurate, timely financial records are the cornerstone of any sustainable enterprise. With the enforcement of UAE Corporate Tax, maintaining verified books of accounts supported by source documents is now a federal legal obligation under Federal Decree-Law No. 47.\n\nANK Global provides complete outsourced accounting solutions, integrating cloud-based platforms like Zoho Books, Xero, QuickBooks, and Odoo. Our experienced accountants ensure seamless ledger maintenance, reconciled banking transactions, and strategic monthly management reports.',
     features: [
-      'Cloud Accounting Setup & Management (QuickBooks, Xero, Zoho)',
-      'Overdue Backlog Accounting & Historic Ledger Rectification',
-      'Virtual & Dedicated Remote Bookkeeper Placement',
-      'Monthly Bank, Credit Card & Supplier Statement Reconciliations',
-      'Standard Operating Procedures (SOPs) Design for Finance',
-      'Management Information Systems (MIS) Reporting'
+      'Daily, Weekly, and Monthly General Ledger Maintenance',
+      'Multi-Currency Bank, Credit Card, and Payment Gateway Reconciliation',
+      'Monthly Management Accounts (P&L, Balance Sheet, Cash Flow)',
+      'Accounts Payable (AP) and Accounts Receivable (AR) Aging Management',
+      'Backlog Accounting Recovery & Multi-Year Ledger Reconciliation',
+      'WPS-Compliant Payroll Processing & Employee Gratuity Accruals'
     ],
     deliverables: [
-      'Monthly Profit & Loss, Balance Sheet & Cash Flow Statements',
-      'Aged Receivables & Payables Ledgers',
-      'Clean Trial Balance ready for Audit and Tax Filing'
+      'Monthly Executive Management Information System (MIS) Reports',
+      'Reconciled General Ledger & Trial Balance',
+      'Audit-Ready Electronic Accounting Records File',
+      'Periodic Cash Flow Forecasts'
     ],
     faqs: [
       {
-        question: 'How long must accounting records be maintained in the UAE?',
-        answer: 'Under UAE VAT and Corporate Tax regulations, commercial records and supporting financial documents must be securely preserved for a minimum of 5 years (and 15 years for real estate).'
+        question: 'Is accounting mandatory for all companies in the UAE?',
+        answer: 'Yes. Under both the UAE Commercial Companies Law and the Federal Corporate Tax Law, every business entity is legally required to keep accurate financial records for a minimum of 5 to 7 years.'
       }
     ],
-    metaTitle: 'Accounting & Bookkeeping Services in Dubai | ANK Global',
-    metaDescription: 'Professional accounting and bookkeeping in UAE. Cloud accounting, backlog cleanup, monthly MIS reports, and IFRS compliance in Dubai.',
+    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'Accounting & Bookkeeping Services Dubai UAE | ANK Global',
+    metaDescription: 'Professional accounting and bookkeeping services in Dubai. Cloud accounting setup, backlog recovery, monthly MIS reporting, and IFRS compliant books.',
   },
   {
     id: 's7',
-    slug: 'management-consultancy',
-    title: 'Strategic Management Consultancy',
-    category: 'Advisory Services',
-    shortDescription: 'Executive advisory, corporate governance, organizational restructuring, feasibility studies, and operational policy design for sustainable growth.',
-    fullDescription: 'Thriving in the dynamic UAE and regional markets requires agile strategic planning, sound corporate governance, and robust risk frameworks. ANK Global’s management consultants partner with board members, founders, and executive leadership to diagnose organizational bottlenecks and conduct bankable feasibility studies.',
+    slug: 'corporate-finance',
+    title: 'Corporate Finance & Business Valuation',
+    category: 'Financial & Audit',
+    shortDescription: 'Institutional financial advisory: discounted cash flow (DCF) valuations, bank debt syndication, financial feasibility studies, and buy-side M&A due diligence.',
+    fullDescription: 'Expanding market share, acquiring target businesses, or securing debt financing demands institutional financial analysis. ANK Global assists business leaders, private equity groups, and family offices in evaluating transactions and deploying capital effectively.\n\nOur corporate finance professionals build robust financial models, perform forensic due diligence, and author authoritative feasibility studies recognized by regional commercial banks and sovereign wealth funds.',
     features: [
-      'Corporate Strategy Formulation & Market Entry Roadmaps',
-      'Bankable Feasibility Studies & Market Opportunity Analysis',
-      'Corporate Governance Frameworks & Board Charters',
-      'Change Management & Post-Merger Operational Integration',
-      'Internal Control System Engineering & Fraud Safeguards'
+      'Business Valuation using DCF, Market Multiples, and NAV Methodologies',
+      'Financial & Commercial Feasibility Studies for New UAE Ventures',
+      'M&A Financial Due Diligence & Quality of Earnings (QoE) Analysis',
+      'Corporate Debt Restructuring, Refinancing & Working Capital Structuring',
+      'Financial Modeling for Investor Pitch Decks and Private Placements'
     ],
     deliverables: [
-      'Bankable Comprehensive Feasibility Study Report',
-      'Corporate Governance Charter & Committee Structures',
-      'Enterprise Policy and Standard Operating Manual'
+      'Certified Business Valuation Report',
+      'Bank-Ready Comprehensive Feasibility Study',
+      'Transaction Due Diligence Findings Memorandum'
     ],
     faqs: [
       {
-        question: 'What is included in an ANK Global feasibility study?',
-        answer: 'Our studies include market research, competitive benchmarking, technical feasibility, financial forecasting (5-year DCF, IRR, NPV, payback period), and sensitivity/risk analysis designed to satisfy UAE commercial banks and investors.'
+        question: 'When is a formal business valuation required in the UAE?',
+        answer: 'Valuations are required for partner buy-ins or exits, mergers and acquisitions, capital increases, securing bank finance, corporate restructuring, and resolving shareholder disputes.'
       }
     ],
-    metaTitle: 'Management Consultancy & Feasibility Studies Dubai | ANK Global',
-    metaDescription: 'Strategic management consulting in UAE. Feasibility studies, corporate governance, change management, and internal policy design for high-growth enterprises.',
+    imageUrl: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'Corporate Finance & Business Valuation Dubai | ANK Global',
+    metaDescription: 'Strategic corporate finance advisory in Dubai. Business valuations, M&A financial due diligence, feasibility studies, and debt syndication support.',
   },
   {
     id: 's8',
-    slug: 'corporate-finance',
-    title: 'Corporate Finance & Business Valuation',
-    category: 'Advisory Services',
-    shortDescription: 'Mergers & acquisitions advisory, independent business valuation (DCF / multiples), debt restructuring, financial due diligence, and capital advisory.',
-    fullDescription: 'Whether raising capital, executing a cross-border acquisition, refinancing debt, or preparing for a shareholder exit, accurate financial evaluation and astute transaction advisory are imperative.',
+    slug: 'management-consultancy',
+    title: 'Strategic Management Consultancy',
+    category: 'Advisory & Consulting',
+    shortDescription: 'Business transformation, corporate restructuring, KPI architecture, internal process optimization, and corporate governance frameworks across UAE sectors.',
+    fullDescription: 'Sustained profitability requires robust operational systems, clear key performance indicators, and forward-looking corporate governance. ANK Global’s management consultants partner with executive leadership to identify operational bottlenecks, design scalable organizational structures, and implement performance controls.\n\nWe provide the objective, data-backed insights necessary to steer companies toward sustainable growth in competitive UAE markets.',
     features: [
-      'Mergers & Acquisitions (M&A) Buy-Side and Sell-Side Advisory',
-      'Independent Business Valuation (DCF, Market Multiples, Net Asset)',
-      'Financial Due Diligence & Quality of Earnings Reports',
-      'Corporate Restructuring & Balance Sheet Recapitalization',
-      'Transaction Advisory & Term Sheet Negotiation Support'
+      'Corporate Governance Frameworks & Board Reporting Structures',
+      'Standard Operating Procedures (SOPs) Design for Finance & Operations',
+      'Cost Rationalization & Profit Margin Enhancement Programs',
+      'Key Performance Indicator (KPI) Architecture & Executive Dashboards',
+      'Organizational Restructuring & Change Management'
     ],
     deliverables: [
-      'Certified Valuation Report compliant with IVS Standards',
-      'Confidential Information Memorandum (CIM)',
-      'Financial Due Diligence Audit Dossier'
+      'Operational Assessment & Performance Gap Analysis Report',
+      'Institutional Standard Operating Procedures Manual',
+      'Executive KPI Performance Monitoring Dashboard'
     ],
     faqs: [
       {
-        question: 'What methodologies do you utilize for business valuation in the UAE?',
-        answer: 'We utilize Discounted Cash Flow (DCF), Comparable Company Analysis (CCA), Precedent Transactions, and Adjusted Book Value, tailored to UAE market dynamics and specific industry benchmarks.'
+        question: 'How do management consultancy services benefit UAE SMEs?',
+        answer: 'Consultancy provides SMEs with the corporate governance, automated financial controls, and scalable structures typically only available to large multinationals, driving operational efficiency and profitability.'
       }
     ],
-    metaTitle: 'Corporate Finance & Valuation Services UAE | ANK Global',
-    metaDescription: 'Trusted corporate finance advisory in Dubai. M&A advisory, independent business valuation, financial due diligence, and capital structuring.',
+    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'Strategic Management Consultancy Dubai | ANK Global',
+    metaDescription: 'Management consultancy in Dubai UAE. Business strategy, corporate restructuring, organizational SOPs, cost optimization, and performance dashboards.',
   },
   {
     id: 's9',
     slug: 'smart-sourcing',
     title: 'Smart Sourcing & Virtual CFO Support',
-    category: 'Advisory Services',
-    shortDescription: 'Fractional Chief Financial Officer (CFO) advisory, business process re-engineering, digital finance automation, and specialized talent sourcing.',
-    fullDescription: 'Rapidly scaling businesses need elite financial leadership and agile operational models without incurring the full overhead of an executive C-suite hire. ANK Global’s Smart Sourcing suite provides access to experienced Virtual CFOs who steer cash flow management and investor relations.',
+    category: 'Advisory & Consulting',
+    shortDescription: 'Flexible executive financial leadership: fractional CFO advisory, board-level reporting, cash flow runway management, and specialized outsourced accounting teams.',
+    fullDescription: 'Securing experienced CFO leadership is often prohibitively expensive for high-growth enterprises and SMEs. ANK Global’s Smart Sourcing and Virtual CFO solutions deliver seasoned financial leadership on a flexible, fractional retainer.\n\nOur Virtual CFOs participate in executive board meetings, supervise internal finance personnel, model scenario forecasts, and negotiate with banks and investors—delivering institutional expertise tailored to your operational velocity.',
     features: [
-      'Fractional / Part-Time CFO Strategic Advisory',
-      'Budgeting, Forecasting & Cash Runway Management',
-      'Business Process Enhancement & Operational Streamlining',
-      'Digital Finance Transformation & Automated Workflows'
+      'Fractional CFO Strategic Direction & Boardroom Financial Guidance',
+      'Dynamic 13-Week Cash Flow Forecasting & Runway Optimization',
+      'Oversight & Quality Review of Internal Accounting Operations',
+      'Banking Relationship Management & Credit Facility Negotiations',
+      'Investor Reporting Packages & Capital Allocation Strategies'
     ],
     deliverables: [
-      'Monthly Virtual CFO Strategic Review & Board Deck',
-      '13-Week Dynamic Cash Flow Forecast Model',
-      'Optimized Process Workflow Diagrams'
+      'Monthly Board-Level Executive CFO Pack',
+      'Live Rolling Cash Flow Model',
+      'Financial Strategy & Growth Roadmap'
     ],
     faqs: [
       {
-        question: 'When should a growing business hire a Virtual CFO?',
-        answer: 'When a company surpasses AED 5M-10M in annual turnover, needs strategic forecasting or debt financing, but does not yet require a full-time AED 50,000/month in-house CFO.'
+        question: 'What is the advantage of a Virtual CFO over an in-house CFO?',
+        answer: 'A Virtual CFO delivers top-tier financial expertise at a fraction of the cost of a full-time executive, while providing access to our entire multi-disciplinary firm of tax agents, auditors, and IT consultants.'
       }
     ],
+    imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
     metaTitle: 'Virtual CFO Services & Smart Sourcing in UAE | ANK Global',
     metaDescription: 'Fractional CFO and smart sourcing services in Dubai. High-level financial guidance, cash flow planning, KPI tracking, and finance automation.',
   },
   {
     id: 's10',
+    slug: 'professional-development',
+    title: 'Professional Developments & Finance Training',
+    category: 'Advisory & Consulting',
+    shortDescription: 'Customized executive masterclasses, IFRS technical updates, UAE Corporate Tax workshops, and financial governance training for boardrooms and finance teams.',
+    fullDescription: 'With the rapid enactment of federal economic legislation in the UAE—including Federal Decree-Law No. 47 on Corporate Tax, Ministerial Decision No. 120 on Transfer Pricing, and evolving IFRS accounting standards—continuous professional development is mandatory for leadership and finance teams.\n\nANK Global’s senior Chartered Accountants deliver high-impact, practical training programs for CFOs, financial controllers, accountants, and non-financial executives. Each course is tailored to your industry, focusing on compliance checklists, automated ERP entries, risk mitigation, and strategic financial leadership.',
+    features: [
+      'UAE Corporate Tax (9%) & Transfer Pricing Technical Workshops',
+      'IFRS Standards Updates & Financial Statement Presentation',
+      'UAE VAT Advanced Compliance, Reverse Charge & Invoicing Rules',
+      'Executive Financial Literacy for Founders and Board Directors',
+      'Internal Controls, Fraud Risk & Anti-Money Laundering (AML) Protocols',
+      'Interactive Case Studies with Real-World UAE Precedents'
+    ],
+    deliverables: [
+      'Customized Training Curriculum & Technical Presentation Slides',
+      'Comprehensive Regulatory Reference Manual & Checklist Pack',
+      'Certificate of Completion for Continuing Professional Education (CPE)',
+      'Post-Training Q&A Session and Advisory Consultation with Partners'
+    ],
+    faqs: [
+      {
+        question: 'Can ANK Global conduct on-site corporate training at our offices?',
+        answer: 'Yes. We deliver tailored corporate training sessions both on-site at your company premises across the UAE and virtually via interactive live masterclasses.'
+      },
+      {
+        question: 'Are these courses suitable for non-financial executives?',
+        answer: 'Yes, we offer specialized "Finance for Non-Finance Managers" masterclasses specifically structured to demystify balance sheets, tax impact, and cash flow governance.'
+      }
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'Professional Developments & Finance Training UAE | ANK Global',
+    metaDescription: 'Executive finance training and professional development in Dubai. UAE Corporate Tax, VAT, IFRS updates, and boardroom financial governance masterclasses.',
+  },
+  {
+    id: 's11',
     slug: 'company-setup-uae',
-    title: 'UAE Company Formation & Licensing',
-    category: 'Corporate Services',
+    title: 'Company Setup in UAE – Mainland & Free Zones',
+    category: 'Business Setup & Tech',
     shortDescription: 'Turnkey business setup across Dubai Mainland (DED), Free Zones (DMCC, DIFC, IFZA, DAFZA, JAFZA), and Offshore jurisdictions with full regulatory licensing.',
-    fullDescription: 'Selecting the optimal corporate structure is foundational to long-term tax efficiency, foreign ownership rights, visa quotas, and banking success in the UAE. ANK Global guides local and international entrepreneurs through every step of commercial incorporation.',
+    fullDescription: 'Selecting the optimal corporate structure is foundational to long-term tax efficiency, foreign ownership rights, visa quotas, and banking success in the UAE. ANK Global guides local and international entrepreneurs through every step of commercial incorporation.\n\nWe coordinate trade name reservations, initial approvals, Memorandum and Articles of Association (MOA) drafting, Ejari commercial leasing, and trade license issuance across mainland Department of Economy and Tourism (DET) and more than 40 premier UAE Free Zones.',
     features: [
       'Mainland (DET / DED) Company Incorporation (100% Foreign Ownership)',
       'UAE Free Zone Licensing (DMCC, DIFC, IFZA, DAFZA, Meydan, Shams)',
       'Offshore Entity Formation (JAFZA Offshore, RAK ICC)',
       'Memorandum & Articles of Association (MOA) Drafting & Notarization',
-      'Ejari / Office Lease Assistance & Virtual Office Solutions'
+      'Ejari / Office Lease Assistance & Virtual Office Solutions',
+      'Tax-Optimized Corporate Structuring for UAE Corporate Tax'
     ],
     deliverables: [
       'Official Commercial Trade License',
       'Memorandum of Association & Chamber of Commerce Certificate',
-      'Company Establishment Card & Official Stamp'
+      'Company Establishment Card & Official Stamp',
+      'Commercial Lease Registry (Ejari Certificate)'
     ],
     faqs: [
       {
         question: 'Can foreigners own 100% of a mainland UAE company?',
         answer: 'Yes. Under the amended UAE Commercial Companies Law, 100% foreign ownership is permitted across more than 1,000 commercial and industrial activities without requiring a local Emirati sponsor.'
+      },
+      {
+        question: 'Which is better: Dubai Mainland or Free Zone?',
+        answer: 'Mainland licenses allow you to trade freely anywhere across the UAE and work directly on government tenders. Free Zones offer 100% customs duty exemptions within the zone and streamlined digital licensing, making them ideal for international consultancies, holding companies, and digital trading.'
       }
     ],
+    imageUrl: 'https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=1200&q=80',
     metaTitle: 'UAE Company Formation & Business Setup Dubai | ANK Global',
     metaDescription: 'Setup your business in Dubai Mainland & Free Zones with ANK Global. 100% foreign ownership, trade licensing, MOA drafting, and fast-track company registration.',
   },
   {
-    id: 's11',
+    id: 's12',
+    slug: 'corporate-bank-account-opening',
+    title: 'Corporate Bank Account Opening Assistance',
+    category: 'Business Setup & Tech',
+    shortDescription: 'Strategic banking partner introductions, complete compliance dossier compilation, and fast-track corporate bank account opening across leading UAE tier-1 banks.',
+    fullDescription: 'Opening a corporate bank account in the UAE is one of the most critical and scrutinized milestones for any newly incorporated mainland or Free Zone enterprise. Due to strict Central Bank of the UAE regulations and stringent Anti-Money Laundering (AML) standards, banks demand extensive KYC documentation, verified source of funds, business plans, and proof of commercial substance.\n\nANK Global bridges the gap between your enterprise and premier UAE financial institutions. Our dedicated corporate banking advisory team prepares institutional-grade banking dossiers, formats audited statements, verifies counterparties, and liaises directly with senior relationship managers across Emirates NBD, Mashreq, Abu Dhabi Commercial Bank (ADCB), First Abu Dhabi Bank (FAB), Wio Bank, and RAKBANK.',
+    features: [
+      'Pre-evaluation of corporate structure, UBOs, and jurisdictional banking risk',
+      'Compilation of comprehensive KYC dossier and commercial profile',
+      'Detailed business plan drafting highlighting trade flows and counterparties',
+      'Direct introductions to senior relationship managers at Tier-1 UAE banks',
+      'Assistance with digital corporate banking platforms (Wio, Mashreq NeoBiz)',
+      'Ongoing compliance support for Central Bank periodic KYC reviews'
+    ],
+    deliverables: [
+      'Bank-Ready Institutional Dossier & Business Plan',
+      'Submitted Bank Application with Confirmed Tracking Reference',
+      'Active Multi-Currency Corporate IBAN Account (AED, USD, EUR, GBP)',
+      'Corporate Online Banking Credentials and Token Setup Support'
+    ],
+    faqs: [
+      {
+        question: 'How long does it take to open a UAE corporate bank account?',
+        answer: 'With a complete, pre-vetted dossier prepared by ANK Global, account approvals typically range from 2 to 4 weeks depending on the banking institution and business activity.'
+      },
+      {
+        question: 'Can foreign non-residents open a UAE corporate bank account?',
+        answer: 'Yes, foreign shareholders can open a corporate bank account provided the UAE company is legitimately incorporated, valid trade licenses are presented, and commercial substance or residency is demonstrated.'
+      }
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?auto=format&fit=crop&w=1200&q=80',
+    metaTitle: 'Corporate Bank Account Opening in Dubai UAE | ANK Global',
+    metaDescription: 'Fast-track corporate bank account opening in UAE with ANK Global. Tier-1 banks, complete KYC dossiers, multi-currency accounts, and senior banker introductions.',
+  },
+  {
+    id: 's13',
     slug: 'pro-services-uae',
-    title: 'PRO Services & Corporate Relations',
-    category: 'Corporate Services',
-    shortDescription: 'Government liaison, investor and employee visa processing, Emirates ID, medical clearance, corporate bank account assistance, and regulatory compliance.',
-    fullDescription: 'Navigating governmental documentation, labor quotas, immigration requirements, and municipal approvals can consume vital operational hours. ANK Global’s dedicated Corporate Relations and Public Relations Officer (PRO) team handles all administrative formalities.',
+    title: 'PRO Services & Corporate Relations in UAE',
+    category: 'Business Setup & Tech',
+    shortDescription: 'Government liaison, investor and employee visa processing, Emirates ID, medical clearance, trade license renewals, and ministerial regulatory compliance.',
+    fullDescription: 'Navigating governmental documentation, labor quotas, immigration requirements, and municipal approvals can consume vital operational hours. ANK Global’s dedicated Corporate Relations and Public Relations Officer (PRO) team handles all administrative formalities directly with UAE government departments.\n\nFrom investor residency visas and Golden Visas to Ministry of Human Resources & Emiratisation (MOHRE) compliance, we ensure your business maintains uninterrupted legal standing.',
     features: [
       'Investor & Partner Visa Processing (including Golden Visa assistance)',
-      'Employee Employment Visa, Medical Typing & Emirates ID',
-      'Corporate Bank Account Opening Guidance & Documentation',
-      'License Amendments, Partner Additions & Capital Changes',
-      'Tenancy Contract Registration (Ejari) & Municipal Approvals'
+      'Employee Employment Visa, Medical Typing & Emirates ID Biometrics',
+      'Ministry of Human Resources (MOHRE) Quota & Labor Card Approvals',
+      'Commercial License Annual Renewals & Activity Amendments',
+      'Tenancy Contract Registration (Ejari) & Municipal Approvals',
+      'Document Attestation, Legal Translation & Power of Attorney (POA)'
     ],
     deliverables: [
       'Approved Residency Visas & Emirates ID Cards',
-      'Completed Corporate Bank Account Application Dossier',
-      'Annual Commercial License Renewal Certificate'
+      'Completed MOHRE Labor Quotas and Work Permits',
+      'Annual Commercial License Renewal Certificate',
+      'Attested Corporate Documents'
     ],
     faqs: [
       {
         question: 'How long does a UAE investor visa take to process?',
         answer: 'Standard investor visa processing typically takes 5 to 7 business days following entry permit issuance and completion of medical fitness testing and biometrics.'
+      },
+      {
+        question: 'What is required for a UAE 10-Year Golden Visa?',
+        answer: 'Real estate investment of at least AED 2 million, specialized professional talent, entrepreneurs with qualified business projects, or high-income executive professionals meeting salary thresholds.'
       }
     ],
+    imageUrl: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80',
     metaTitle: 'Corporate PRO Services & Visa Assistance Dubai | ANK Global',
     metaDescription: 'Reliable corporate PRO services in Dubai. Investor visas, employee visas, Golden Visa consultation, corporate bank accounts, and trade license renewals.',
   },
   {
-    id: 's12',
+    id: 's14',
     slug: 'erp-solutions',
     title: 'ERP Software Solutions & Implementation',
-    category: 'Technology Solutions',
+    category: 'Business Setup & Tech',
     shortDescription: 'Bespoke ERP selection, implementation, chart of accounts customization, and integration of Zoho Books, Odoo, SAP Business One, and custom accounting databases.',
-    fullDescription: 'Modern accounting and auditing standards require integrated Enterprise Resource Planning (ERP) systems that unify inventory, invoicing, CRM, and financial accounting while remaining fully compliant with UAE VAT and Corporate Tax electronic records rules.',
+    fullDescription: 'Modern accounting and auditing standards require integrated Enterprise Resource Planning (ERP) systems that unify inventory, invoicing, CRM, and financial accounting while remaining fully compliant with UAE VAT and Corporate Tax electronic records rules.\n\nANK Global’s certified technology consultants specialize in Zoho Books, Odoo ERP, and SAP implementations, designing customized charts of accounts, configuring tax-compliant invoicing templates, and migrating legacy financial records with zero data loss.',
     features: [
-      'ERP Needs Assessment & System Selection (Zoho, Odoo, SAP, bespoke)',
+      'ERP Needs Assessment & System Selection (Zoho Books, Odoo, SAP)',
       'Custom Chart of Accounts Architecture aligned with IFRS and UAE Tax',
+      'Automated Electronic Invoicing compliant with FTA E-Invoicing Mandate',
       'Inventory Management & Supply Chain Workflow Automation',
       'Staff Training & Standard Operating Procedures Documentation',
-      'Legacy Data Migration & Reconciliation to New ERP'
+      'Legacy Data Migration & Historical Balance Reconciliation'
     ],
     deliverables: [
       'Configured & Tested Enterprise ERP Environment',
       'Standard Operating Manual for Financial & Operational Modules',
-      'Migrated Historical Financial Data with Balance Reconciliation'
+      'Migrated Historical Financial Data with Balance Reconciliation',
+      'FTA E-Invoicing Compliant Billing Templates'
     ],
     faqs: [
       {
         question: 'Which ERP systems are recommended for UAE SMEs?',
         answer: 'For UAE SMEs, Zoho Books and Odoo ERP provide excellent compliance with FTA tax requirements, cost-effectiveness, and rapid implementation timelines. For larger trading and manufacturing entities, SAP Business One is ideal.'
+      },
+      {
+        question: 'Will ANK Global train our in-house staff on the new ERP?',
+        answer: 'Yes. We provide complete hands-on training for your accountants, sales team, and management, accompanied by customized step-by-step Standard Operating Procedures (SOPs).'
       }
     ],
+    imageUrl: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80',
     metaTitle: 'ERP Software Solutions & Accounting Integration Dubai | ANK Global',
     metaDescription: 'ERP implementation and accounting software integration in UAE. Zoho, Odoo, SAP setup with FTA compliant VAT and Corporate Tax workflows.',
   },
