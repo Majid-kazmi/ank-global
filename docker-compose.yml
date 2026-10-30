@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ankglobal_dev_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-ankglobal_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-YourStrongDatabasePassword2026!}
+      POSTGRES_DB: ${POSTGRES_DB:-ankglobal_db}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ankglobal_dev_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-ankglobal_user} -d ${POSTGRES_DB:-ankglobal_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ankglobal_net
+
+  redis:
+    image: redis:7-alpine
+    container_name: ankglobal_dev_redis
+    restart: unless-stopped
+    command: redis-server --requirepass ${REDIS_PASSWORD:-YourStrongRedisPassword2026!}
+    ports:
+      - "6379:6379"
+    volumes:
+      - ankglobal_dev_redisdata:/data
+    networks:
+      - ankglobal_net
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ankglobal_dev_backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "4000:4000"
+    environment:
+      NODE_ENV: development
+      PORT: 4000
+      DATABASE_URL: postgresql://${POSTGRES_USER:-ankglobal_user}:${POSTGRES_PASSWORD:-YourStrongDatabasePassword2026!}@postgres:5432/${POSTGRES_DB:-ankglobal_db}?schema=public
+      JWT_SECRET: ${JWT_SECRET:-ank_global_super_secret_jwt_key_2026_at_least_64_chars_long_production_hash!}
+      FRONTEND_URL: http://localhost:3000
+    networks:
+      - ankglobal_net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:4000/api
+        NEXT_PUBLIC_SITE_URL: http://localhost:3000
+    container_name: ankglobal_dev_frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      NEXT_PUBLIC_API_URL: http://localhost:4000/api
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+    networks:
+      - ankglobal_net
+
+volumes:
+  ankglobal_dev_pgdata:
+  ankglobal_dev_redisdata:
+
+networks:
+  ankglobal_net:
+    driver: bridge
