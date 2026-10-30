@@ -64,6 +64,9 @@ export async function getArticleBySlug(slug: string) {
 }
 
 export async function getTeamMembers() {
+  if (process.env.NEXT_EXPORT === 'true') {
+    return FALLBACK_TEAM;
+  }
   try {
     const res = await fetch(`${API_URL}/team`, { next: { revalidate: 86400 } });
     if (!res.ok) throw new Error('Failed to fetch team');

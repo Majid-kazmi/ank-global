@@ -182,14 +182,20 @@ export default async function TeamPage() {
         </section>
       )}
 
-      {/* Leadership & Practice Bench Grid */}
+      {/* Leadership & Practice Directors Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-6 mb-10">
-          <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white">
-            Partners &amp; Practice Bench
+        <div className="space-y-4 mb-12">
+          <div className="flex items-center space-x-2">
+            <span className="h-1.5 w-6 rounded-full bg-crimson-600" />
+            <span className="text-xs font-extrabold uppercase tracking-widest text-gold-400">
+              Senior Leadership Bench
+            </span>
+          </div>
+          <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-white">
+            Executive Partners &amp; Practice Directors
           </h2>
-          <p className="text-sm text-slate-400 max-w-2xl leading-relaxed">
-            Multidisciplinary chartered accountants, certified auditors, and corporate expansion consultants steering client engagements across the Emirates.
+          <p className="text-sm sm:text-base text-slate-400 max-w-3xl leading-relaxed font-light">
+            Multidisciplinary chartered accountants, certified auditors (ICAP, ACCA), and corporate expansion advisors steering enterprise audit, tax, and governance engagements across the UAE and internationally.
           </p>
         </div>
 
@@ -197,10 +203,36 @@ export default async function TeamPage() {
           {otherMembers.map((member: any, idx: number) => (
             <ScrollReveal key={member.id} delay={idx * 0.1}>
               <CardHover className="h-full">
-                <div className="bg-[#0D0E13] rounded-2xl border border-[#222430] hover:border-gold-400/50 transition-all duration-300 overflow-hidden shadow-lg flex flex-col justify-between h-full group p-6 sm:p-7 space-y-5">
-                  <div className="space-y-4">
-                    {/* Header with Qualification */}
-                    <div className="space-y-2">
+                <div className="bg-[#0D0E13] rounded-2xl border border-[#222430] hover:border-gold-400/50 transition-all duration-300 overflow-hidden shadow-xl flex flex-col justify-between h-full group">
+                  {/* Member Photo Container */}
+                  <div className="relative w-full h-72 sm:h-80 overflow-hidden bg-[#141520] border-b border-[#222430]">
+                    <img
+                      src={resolveImage(member.photoUrl) || ''}
+                      alt={member.name}
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D0E13] via-[#0D0E13]/25 to-transparent" />
+                    
+                    {/* Corner Verification Badge */}
+                    <div className="absolute top-3.5 right-3.5">
+                      <span className="inline-flex items-center space-x-1.5 text-[10px] font-bold uppercase tracking-wider text-gold-300 bg-[#090A0C]/85 border border-gold-400/40 px-2.5 py-1 rounded-full backdrop-blur-md shadow-md">
+                        <ShieldCheck className="w-3 h-3 text-gold-400" />
+                        <span>Verified</span>
+                      </span>
+                    </div>
+
+                    {/* Bottom Floating Role Tag */}
+                    <div className="absolute bottom-3 left-4 right-4">
+                      <p className="text-[11px] font-extrabold text-gold-400 uppercase tracking-wider drop-shadow-md">
+                        {member.role}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Member Narrative */}
+                  <div className="p-6 sm:p-7 space-y-4 flex-1 flex flex-col justify-between">
+                    <div className="space-y-3">
+                      {/* Qualification Badge */}
                       <span className="inline-flex items-center text-[10px] font-bold uppercase tracking-wider text-gold-400 bg-gold-400/10 border border-gold-400/25 px-2.5 py-1 rounded-full">
                         <Award className="w-3 h-3 mr-1 text-gold-400" />
                         {member.qualification}
@@ -210,54 +242,60 @@ export default async function TeamPage() {
                         {member.name}
                       </h3>
 
-                      <p className="text-xs font-semibold text-crimson-400 uppercase tracking-wider">
-                        {member.role}
+                      <p className="text-xs text-slate-300 leading-relaxed font-light">
+                        {member.bio}
                       </p>
+
+                      {/* Specialties Pills */}
+                      {member.specialties && (
+                        <div className="pt-2 flex flex-wrap gap-1.5">
+                          {member.specialties.map((spec: string, sIdx: number) => (
+                            <span
+                              key={sIdx}
+                              className="text-[11px] font-medium text-slate-300 bg-[#161722] border border-[#262838] px-2.5 py-0.5 rounded-md"
+                            >
+                              {spec}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
 
-                    <p className="text-xs text-slate-300 leading-relaxed font-light">
-                      {member.bio}
-                    </p>
+                    {/* Card Footer Actions */}
+                    <div className="pt-4 mt-4 border-t border-[#1C1E2A] flex items-center justify-between text-xs text-slate-400">
+                      {member.linkedinUrl && (
+                        <a
+                          href={member.linkedinUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-white flex items-center transition-colors font-semibold text-slate-300 group/link"
+                        >
+                          <Linkedin className="w-3.5 h-3.5 mr-1.5 text-gold-400 group-hover/link:text-gold-300" />
+                          <span>LinkedIn</span>
+                          <ExternalLink className="w-2.5 h-2.5 ml-1 opacity-60 group-hover/link:opacity-100" />
+                        </a>
+                      )}
 
-                    {/* Specialties */}
-                    {member.specialties && (
-                      <div className="pt-2 flex flex-wrap gap-1.5">
-                        {member.specialties.map((spec: string, sIdx: number) => (
-                          <span
-                            key={sIdx}
-                            className="text-[11px] font-medium text-slate-300 bg-[#161722] border border-[#262838] px-2.5 py-0.5 rounded-md"
-                          >
-                            {spec}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Card Footer Links */}
-                  <div className="pt-4 border-t border-[#1C1E2A] flex items-center justify-between text-xs text-slate-400">
-                    {member.email && (
-                      <a
-                        href={`mailto:${member.email}`}
-                        className="hover:text-gold-300 flex items-center transition-colors font-medium"
-                      >
-                        <Mail className="w-3.5 h-3.5 mr-1.5 text-gold-400" />
-                        <span>Email Partner</span>
-                      </a>
-                    )}
-
-                    {member.linkedinUrl && (
-                      <a
-                        href={member.linkedinUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-white flex items-center transition-colors font-medium text-slate-300"
-                      >
-                        <Linkedin className="w-3.5 h-3.5 mr-1 text-gold-400" />
-                        <span>LinkedIn</span>
-                        <ExternalLink className="w-2.5 h-2.5 ml-1 opacity-60" />
-                      </a>
-                    )}
+                      {member.phone ? (
+                        <a
+                          href={`https://wa.me/${member.phone.replace(/[^0-9]/g, '')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-gold-300 flex items-center transition-colors font-medium text-slate-300"
+                        >
+                          <MessageCircle className="w-3.5 h-3.5 mr-1.5 text-crimson-400" />
+                          <span>WhatsApp</span>
+                        </a>
+                      ) : member.email ? (
+                        <a
+                          href={`mailto:${member.email}`}
+                          className="hover:text-gold-300 flex items-center transition-colors font-medium"
+                        >
+                          <Mail className="w-3.5 h-3.5 mr-1.5 text-gold-400" />
+                          <span>Email</span>
+                        </a>
+                      ) : null}
+                    </div>
                   </div>
                 </div>
               </CardHover>
