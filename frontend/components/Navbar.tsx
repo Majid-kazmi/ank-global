@@ -85,7 +85,7 @@ export default function Navbar() {
 
       {/* Main Navigation Bar (100% Solid Opaque Background) */}
       <nav
-        className={`transition-all duration-300 ${
+        className={`relative transition-all duration-300 ${
           scrolled
             ? 'bg-[#090A0C] shadow-2xl border-b border-[#20222B] py-1'
             : 'bg-[#090A0C] text-white border-b border-[#1A1B22] py-2'
@@ -94,7 +94,11 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
             {/* Brand Identity - Official Vector Logo (Compact & Sleek) */}
-            <Link href="/" className="flex items-center shrink-0 py-1 mr-4 lg:mr-8 group">
+            <Link
+              href="/"
+              onMouseEnter={() => setServicesDropdown(false)}
+              className="flex items-center shrink-0 py-1 mr-4 lg:mr-8 group"
+            >
               <div className="transition-transform duration-300 group-hover:scale-[1.02]">
                 <AnkLogo variant="dark" className="h-7 sm:h-8 lg:h-9 w-auto max-w-[150px] sm:max-w-[180px]" priority />
               </div>
@@ -104,6 +108,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center space-x-6 xl:space-x-7">
               <Link
                 href="/"
+                onMouseEnter={() => setServicesDropdown(false)}
                 className={`relative text-sm font-medium transition-colors hover:text-gold-400 py-1 ${
                   isCurrent('/') ? 'text-gold-400 font-semibold' : 'text-slate-200'
                 }`}
@@ -119,6 +124,7 @@ export default function Navbar() {
 
               <Link
                 href="/about"
+                onMouseEnter={() => setServicesDropdown(false)}
                 className={`relative text-sm font-medium transition-colors hover:text-gold-400 py-1 ${
                   isCurrent('/about') ? 'text-gold-400 font-semibold' : 'text-slate-200'
                 }`}
@@ -132,15 +138,15 @@ export default function Navbar() {
                 )}
               </Link>
 
-              {/* Services Mega Dropdown with Structured Sub-menus (Concise text, No verbose subtext) */}
+              {/* Services Mega Dropdown with Structured Sub-menus (Centered to Screen/Navbar, No Overflow) */}
               <div
-                className="relative"
+                className="flex items-center h-full"
                 onMouseEnter={() => setServicesDropdown(true)}
                 onMouseLeave={() => setServicesDropdown(false)}
               >
                 <Link
                   href="/services"
-                  className={`flex items-center text-sm font-medium transition-colors hover:text-gold-400 py-1 ${
+                  className={`relative flex items-center text-sm font-medium transition-colors hover:text-gold-400 py-1 ${
                     pathname.startsWith('/services') ? 'text-gold-400 font-semibold' : 'text-slate-200'
                   }`}
                 >
@@ -150,17 +156,23 @@ export default function Navbar() {
                       servicesDropdown ? 'rotate-180 text-gold-400' : ''
                     }`}
                   />
+                  {pathname.startsWith('/services') && (
+                    <motion.div
+                      layoutId="navbar-indicator"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-crimson-500 to-gold-400 rounded-full"
+                    />
+                  )}
                 </Link>
 
-                {/* 100% Solid Opaque Dropdown with 4 Clean Sub-menu Columns */}
+                {/* 100% Solid Opaque Dropdown with 4 Clean Sub-menu Columns (Centered to Navbar) */}
                 <AnimatePresence>
                   {servicesDropdown && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0.99 }}
+                      initial={{ opacity: 0, y: 8, scale: 0.99 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 6, scale: 0.99 }}
                       transition={{ duration: 0.18, ease: 'easeOut' }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 w-[780px] xl:w-[840px] bg-[#0D0E13] border border-[#262834] rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_0_1px_rgba(255,255,255,0.06)] p-5 mt-2 z-50 overflow-hidden"
+                      className="absolute top-full left-1/2 -translate-x-1/2 w-[820px] xl:w-[860px] max-w-[calc(100vw-32px)] bg-[#0D0E13] border border-[#262834] rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_0_1px_rgba(255,255,255,0.06)] p-5 mt-1 z-50 overflow-hidden before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
                     >
                       {/* Top Brand Accent Stripe */}
                       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-crimson-600 via-gold-400 to-crimson-600" />
@@ -377,6 +389,7 @@ export default function Navbar() {
 
               <Link
                 href="/industries"
+                onMouseEnter={() => setServicesDropdown(false)}
                 className={`relative text-sm font-medium transition-colors hover:text-gold-400 py-1 ${
                   isCurrent('/industries') ? 'text-gold-400 font-semibold' : 'text-slate-200'
                 }`}
@@ -386,6 +399,7 @@ export default function Navbar() {
 
               <Link
                 href="/insights"
+                onMouseEnter={() => setServicesDropdown(false)}
                 className={`relative text-sm font-medium transition-colors hover:text-gold-400 py-1 ${
                   isCurrent('/insights') ? 'text-gold-400 font-semibold' : 'text-slate-200'
                 }`}
@@ -395,6 +409,7 @@ export default function Navbar() {
 
               <Link
                 href="/contact"
+                onMouseEnter={() => setServicesDropdown(false)}
                 className={`relative text-sm font-medium transition-colors hover:text-gold-400 py-1 ${
                   isCurrent('/contact') ? 'text-gold-400 font-semibold' : 'text-slate-200'
                 }`}
@@ -404,7 +419,10 @@ export default function Navbar() {
             </div>
 
             {/* Action CTA Button */}
-            <div className="hidden lg:flex items-center space-x-3">
+            <div
+              className="hidden lg:flex items-center space-x-3"
+              onMouseEnter={() => setServicesDropdown(false)}
+            >
               <Link
                 href="/book-consultation"
                 className="btn-shimmer inline-flex items-center px-4 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-crimson-600 via-crimson-500 to-crimson-600 text-white hover:from-crimson-500 hover:to-crimson-600 shadow-md shadow-crimson-900/30 transition-all hover:scale-[1.02] active:scale-[0.98] border border-crimson-400/30"
