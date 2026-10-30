@@ -90,37 +90,31 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   ];
 
   return (
-    <div className="space-y-12 sm:space-y-16 py-6 sm:py-8 pb-24 select-none">
-      {/* Breadcrumb Navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="flex items-center space-x-2 text-xs text-slate-500 overflow-x-auto whitespace-nowrap py-1">
-          <Link href="/" className="hover:text-navy-950 transition-colors">
-            Home
-          </Link>
-          <ChevronRight className="w-3.5 h-3.5 shrink-0 text-slate-400" />
-          <Link href="/services" className="hover:text-navy-950 transition-colors">
-            Services
-          </Link>
-          <ChevronRight className="w-3.5 h-3.5 shrink-0 text-slate-400" />
-          <span className="text-crimson-600 font-semibold truncate">{service.title}</span>
-        </nav>
-      </div>
-
-      {/* Hero Header */}
-      <section className="relative overflow-hidden bg-[#090A0C] text-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#1E202B]">
+    <div className="space-y-12 sm:space-y-16 pb-24 select-none">
+      {/* Hero Header (Directly connects with dark Navbar) */}
+      <section className="relative overflow-hidden bg-[#090A0C] text-white py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-[#1E202B]">
         <BackgroundMesh />
-        <div className="max-w-7xl mx-auto space-y-4 relative z-10">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-400 text-xs font-bold uppercase tracking-wider">
-            <ShieldCheck className="w-3.5 h-3.5 text-crimson-500" />
-            <span>{service.category}</span>
+        <div className="max-w-7xl mx-auto space-y-6 relative z-10">
+          {/* Practice Badge Category (Row 1 - Independent Alignment) */}
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-crimson-950/70 border border-crimson-500/40 text-crimson-400 text-xs font-bold uppercase tracking-wider shadow-sm">
+              <ShieldCheck className="w-3.5 h-3.5 text-gold-400" />
+              <span>{service.category || 'Tax & Advisory Services'}</span>
+            </span>
+            <span className="inline-flex items-center text-xs text-slate-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full">
+              UAE Statutory & Regulatory Compliance
+            </span>
           </div>
 
-          <TextReveal
-            text={service.title}
-            className="text-3xl sm:text-5xl font-display font-extrabold text-white max-w-4xl tracking-tight leading-tight"
-          />
+          {/* Service Title (Row 2 - Full-Width Block Heading) */}
+          <div className="block w-full">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white max-w-4xl tracking-tight leading-tight">
+              {service.title}
+            </h1>
+          </div>
 
-          <p className="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed font-light">
+          {/* Service Description (Row 3 - Clean Reading Line) */}
+          <p className="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed font-light">
             {service.shortDescription}
           </p>
         </div>

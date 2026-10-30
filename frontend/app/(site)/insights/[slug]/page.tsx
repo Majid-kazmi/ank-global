@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Calendar, Clock, User, ChevronRight, ArrowLeft, Share2, ShieldCheck, Sparkles } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Share2, ShieldCheck, Sparkles, ChevronRight } from 'lucide-react';
 import { getArticleBySlug, getArticles } from '@/lib/api';
 import JsonLd from '@/components/JsonLd';
 import ScrollReveal from '@/components/animations/ScrollReveal';
@@ -68,22 +68,7 @@ export default async function InsightDetailPage({ params }: InsightPageProps) {
     <div className="py-8 pb-24 space-y-12">
       <JsonLd type="Article" data={articleSchema} />
 
-      {/* Breadcrumb Navigation */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <nav className="flex items-center space-x-2 text-xs text-slate-500 mb-6">
-          <Link href="/" className="hover:text-navy-950 transition-colors">
-            Home
-          </Link>
-          <ChevronRight className="w-3.5 h-3.5" />
-          <Link href="/insights" className="hover:text-navy-950 transition-colors">
-            Insights
-          </Link>
-          <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-crimson-600 font-semibold line-clamp-1">{article.title}</span>
-        </nav>
-      </div>
-
-      {/* Article Header */}
+{/* Article Header */}
       <header className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
         <ScrollReveal>
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-crimson-50 border border-crimson-200 text-crimson-700 text-xs font-bold uppercase tracking-wider">

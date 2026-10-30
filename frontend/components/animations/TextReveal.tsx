@@ -52,9 +52,11 @@ export function TextReveal({
     },
   };
 
+  const MotionComponent = (motion[Component as 'h1' | 'h2' | 'h3' | 'p' | 'span'] || motion.span) as any;
+
   return (
-    <motion.span
-      className={`inline-block ${className}`}
+    <MotionComponent
+      className={className}
       variants={container}
       initial="hidden"
       whileInView="visible"
@@ -69,7 +71,7 @@ export function TextReveal({
           {word}
         </motion.span>
       ))}
-    </motion.span>
+    </MotionComponent>
   );
 }
 
